@@ -1,0 +1,308 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#"
+     xml:base="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl"
+     xmlns:process="http://www.daml.org/services/owl-s/1.2/Process.owl#"
+     xmlns:iot-lite="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#"
+     xmlns:expression="http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:profile="http://www.daml.org/services/owl-s/1.2/Profile.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:service="http://www.daml.org/services/owl-s/1.2/Service.owl#"
+     xmlns:wgs84_pos="http://www.w3.org/2003/01/geo/wgs84_pos#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl">
+        <owl:versionIRI rdf:resource="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/1.0.0/iot-services.owl"/>
+        <owl:imports rdf:resource="http://www.daml.org/services/owl-s/1.2/Process.owl"/>
+        <owl:imports rdf:resource="http://isco-dev.aot.tu-berlin.de/ontologies/QualityOfService.owl"/>
+        <owl:imports rdf:resource="http://purl.org/NET/dc_owl2dl/elements"/>
+        <owl:imports rdf:resource="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#"/>
+        <owl:imports rdf:resource="http://www.daml.org/services/owl-s/1.2/Service.owl"/>
+        <owl:imports rdf:resource="http://www.daml.org/services/owl-s/1.2/Profile.owl"/>
+        <dc:title>IoT Services</dc:title>
+        <owl:versionInfo>1.0.0</owl:versionInfo>
+        <dc:creator>Christian Kuster</dc:creator>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#hasAccessibility -->
+
+    <owl:ObjectProperty rdf:about="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#hasAccessibility">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#Service"/>
+        <rdfs:range rdf:resource="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#Accessibility"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#hasAttribute -->
+
+    <owl:ObjectProperty rdf:about="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#hasAttribute">
+        <rdfs:domain rdf:resource="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#Service"/>
+        <rdfs:range rdf:resource="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Attribute"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#hasCoverage -->
+
+    <owl:ObjectProperty rdf:about="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#hasCoverage">
+        <rdfs:domain rdf:resource="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#Service"/>
+        <rdfs:range rdf:resource="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Coverage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#isAttributeFor -->
+
+    <owl:ObjectProperty rdf:about="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#isAttributeFor">
+        <rdfs:domain rdf:resource="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Attribute"/>
+        <rdfs:range rdf:resource="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#Service"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#measuringMode -->
+
+    <owl:ObjectProperty rdf:about="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#measuringMode">
+        <rdfs:domain rdf:resource="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#Service"/>
+        <rdfs:range rdf:resource="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#MeasuringMode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#qualityMeasure -->
+
+    <owl:ObjectProperty rdf:about="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#qualityMeasure">
+        <rdfs:domain rdf:resource="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#Service"/>
+        <rdfs:range rdf:resource="http://isco-dev.aot.tu-berlin.de/ontologies/QualityOfService.owl#QualityMetric"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#status -->
+
+    <owl:ObjectProperty rdf:about="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#status">
+        <rdfs:domain rdf:resource="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#Service"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#label -->
+
+    <owl:DatatypeProperty rdf:about="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#label">
+        <rdfs:domain rdf:resource="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#Parameter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#Accessibility -->
+
+    <owl:Class rdf:about="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#Accessibility">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#OpenAccess"/>
+                    <rdf:Description rdf:about="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#RestrictedAccess"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#ActuatorService -->
+
+    <owl:Class rdf:about="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#ActuatorService">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.daml.org/services/owl-s/1.2/Profile.owl#hasOutput"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:cardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#Service"/>
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#ActuatingDevice"/>
+        <owl:disjointWith rdf:resource="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#SensorService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#MeasuringMode -->
+
+    <owl:Class rdf:about="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#MeasuringMode">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#ConstantMeasuringMode"/>
+                    <rdf:Description rdf:about="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#ContinuousMeasuringMode"/>
+                    <rdf:Description rdf:about="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#IntervalMeasuringMode"/>
+                    <rdf:Description rdf:about="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#RequestMeasuringMode"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#Parameter -->
+
+    <owl:Class rdf:about="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#Parameter">
+        <rdfs:subClassOf rdf:resource="http://www.daml.org/services/owl-s/1.2/Process.owl#Parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#SensorService -->
+
+    <owl:Class rdf:about="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#SensorService">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.daml.org/services/owl-s/1.2/Process.owl#hasEffect"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:cardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.daml.org/services/owl-s/1.2/Process.owl#hasInput"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:cardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.daml.org/services/owl-s/1.2/Profile.owl#hasOutput"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#Service"/>
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#Service -->
+
+    <owl:Class rdf:about="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#Service">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.daml.org/services/owl-s/1.2/Service.owl#supports"/>
+                        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#hasAccessibility"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.daml.org/services/owl-s/1.2/Process.owl#AtomicProcess"/>
+        <rdfs:subClassOf rdf:resource="http://www.daml.org/services/owl-s/1.2/Profile.owl#Profile"/>
+        <rdfs:subClassOf rdf:resource="http://www.daml.org/services/owl-s/1.2/Service.owl#Service"/>
+        <rdfs:comment xml:lang="en">A service is a smart object that does not represent a device, but serves abstract information.</rdfs:comment>
+        <rdfs:label xml:lang="de">Dienst</rdfs:label>
+        <rdfs:label xml:lang="en">Service</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#ConstantMeasuringMode -->
+
+    <owl:NamedIndividual rdf:about="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#ConstantMeasuringMode">
+        <rdf:type rdf:resource="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#MeasuringMode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#ContinuousMeasuringMode -->
+
+    <owl:NamedIndividual rdf:about="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#ContinuousMeasuringMode">
+        <rdf:type rdf:resource="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#MeasuringMode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#IntervalMeasuringMode -->
+
+    <owl:NamedIndividual rdf:about="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#IntervalMeasuringMode">
+        <rdf:type rdf:resource="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#MeasuringMode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#OpenAccess -->
+
+    <owl:NamedIndividual rdf:about="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#OpenAccess">
+        <rdf:type rdf:resource="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#Accessibility"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#RequestMeasuringMode -->
+
+    <owl:NamedIndividual rdf:about="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#RequestMeasuringMode">
+        <rdf:type rdf:resource="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#MeasuringMode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#RestrictedAccess -->
+
+    <owl:NamedIndividual rdf:about="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#RestrictedAccess">
+        <rdf:type rdf:resource="http://chariot-km.dai-lab.de:8090/ontologies/iot-services/iot-services.owl#Accessibility"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

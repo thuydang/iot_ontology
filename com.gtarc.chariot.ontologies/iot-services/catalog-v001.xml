@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#" uri="http://iot.ee.surrey.ac.uk/fiware/ontologies/iot-lite/iot-lite.rdf"/>
+    <uri id="Imports Wizard Entry" name="http://purl.org/NET/dc_owl2dl/elements" uri="http://bloody-byte.net/rdf/dc_owl2dl/dc.ttl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1509638402699" name="http://chariot-km.dai-lab.de/ontologies/iot-services/iot-services.owl" uri="iot-services.owl"/>
+    </group>
+</catalog>
